@@ -27,6 +27,7 @@ gem 'sprockets-rails', :require => 'sprockets/railtie'
 group :production do
 	# Use PG for Heroku
 	gem 'pg'
+	gem 'rails_12factor'
 end
 
 group :development, :test do
