@@ -1,4 +1,5 @@
-project_wheres_waldo
-====================
+# Where's Waldo: 
 
-He totally didn't pay his bill.
+Rails, AJAX, JavaScript, and jQuery project.
+
+Solution by [Trevor Elwell](http://trevorelwell.me)
