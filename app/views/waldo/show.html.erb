@@ -1,1 +1,22 @@
-<h2>Hey</h2>
+<div class="row">
+	
+	<section id="header" class="col-xs-12 text-center">
+		<h2>Welcome to Where's Waldo!</h2>
+		<p>Click anywhere on the image to highlight where the characters are. You can drag and drop the selectors.</p>
+		<p>
+			<button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="<%= render partial: "how_to_play" %>">
+			How to Play
+			</button>
+		</p>
+	</section>
+
+	<section id="waldo-image" class="col-xs-12">
+		
+		<!-- Display the Waldo image -->
+		<%= image_tag "waldo" %>	
+
+	</section>
+	<!-- END Waldo Image -->
+
+</div>
+<!-- END Row -->
