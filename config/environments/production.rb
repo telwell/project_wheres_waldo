@@ -76,4 +76,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # QUESTION: Had to do this in order to use image on Heroku. Why is that?
+  # Is there a better way to go about this? I know that this isn't recommended.
+  config.assets.compile = true
 end
