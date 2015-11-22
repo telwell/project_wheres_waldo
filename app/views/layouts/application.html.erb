@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ProjectWheresWaldo</title>
+  <title>Where's Waldo?</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
+<body id="<%= controller_name %>_<%= action_name %>" class="container">
+	
+	<%= flash_messages %>
+	<%= yield %>
 
 </body>
 </html>
