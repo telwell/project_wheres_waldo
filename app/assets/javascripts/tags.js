@@ -9,7 +9,7 @@ Waldo.Tags = (function(){
 	var image_left = 15;
 
 	// How forgiving do we want our game to be?
-	var tolerance = 20;
+	var tolerance = 15;
 
 	// Set the coordinates for where the characters are actually hidden.
 	//  I've set everything to a fixed position so these coords should
