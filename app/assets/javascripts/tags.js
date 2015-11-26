@@ -113,7 +113,7 @@ Waldo.Tags = (function(){
 				});
 			},
 			error: function( xhr, status, errorThrown ) {
-				alert(errorThrown);
+				console.log(errorThrown);
 			}
 		});
 	}
