@@ -1,0 +1,44 @@
+<!-- We only want to show this if the user -->
+<% if session[:waldo_score_submit] == 1 %>
+	<div class="col-sm-6 col-sm-offset-3">
+		<h2>Add Your Name:</h2>
+		<%= form_for User.new do |f| %>	
+			<div class="form-group">
+				<%= f.label :username, "Username" %>
+				<%= f.text_field :username, class: "form-control", placeholder: "Username" %>
+			</div>
+			<div class="form-group">
+				<%= f.submit "Add Name", class: "btn btn-primary" %>
+			</div>
+		<% end %>
+	</div>
+<% end %>
+
+<div class="col-sm-6 col-sm-offset-3">
+
+	<div class="col-sm-4 col-sm-offset-4">
+		<%= link_to "Play Again!", session_path, method: :delete, class: "btn btn-warning" %>
+	</div>
+
+	<div class="col-sm-12">
+		<h2>Leaderboard!</h2>
+		<table class="table table-bordered">
+			<tr>
+				<th>Rank:</th>
+				<th>Name:</th>
+				<th>Score:</th>
+			</tr>
+			<% if @users %>
+				<% @users.each_with_index do |user, i| %>
+					<tr>
+						<td><%= i + 1 %></td>
+						<td><%= user.username %></td>
+						<td><%= user.score %></td>
+					</tr>
+				<% end %>
+			<% end %>
+		</table>
+	</div>
+	<!-- END Table sm-12 div -->
+
+</div>
