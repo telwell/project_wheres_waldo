@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+
 	def create
 		@user = User.new( user_params )	
 		@user.score = set_score_from_session
@@ -11,11 +12,14 @@ class UsersController < ApplicationController
 		end
 	end
 
+
 private
 	
+
 	def user_params
 		params.require(:user).permit(:username)
 	end
+
 
 	def set_score_from_session
 		temp = 0

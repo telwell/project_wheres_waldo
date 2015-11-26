@@ -1,6 +1,8 @@
 class WaldoController < ApplicationController
 
+
 	before_action :find_or_create_session_id, only: [:show]
+
 
 	def show
 		# Set the timer to the session time if present
@@ -14,6 +16,7 @@ class WaldoController < ApplicationController
 			@hours = "00"
 		end
 	end
+
 
 	def victory
 		@users = User.all.order(score: :asc)
@@ -32,5 +35,6 @@ class WaldoController < ApplicationController
 			format.html { render :victory }
 		end
 	end
+
 
 end
