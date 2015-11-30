@@ -3,7 +3,7 @@ var Waldo = Waldo || {}
 
 Waldo.Timer = (function(){
 
-
+	// Timer Inspiration: http://jsfiddle.net/oukjfavu/
 	function init(){
 		var seconds = parseInt($('#seconds').html());
 		var minutes = parseInt($('#minutes').html());
